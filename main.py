@@ -5,6 +5,7 @@ def main():
     #print()
     #print(letter_count(text))
     sorted_dic = sort_dict(book_dictionary)
+    print(type(text))
     print(f"--- Book Analysis of {book_path} ---")
     print(f"{word_count(text)} words found in the book")
     print("")
@@ -29,7 +30,7 @@ def letter_count(book) -> dict:
             total_words[l] = 1
     return(total_words)
 
-def get_book(location):
+def get_book(location) -> str:
      with open("books/frankenstein.txt") as f:
        return(f.read())
 
