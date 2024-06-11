@@ -2,11 +2,17 @@ def main():
     book_path = "books/frankenstein.txt"
     text = get_book(book_path)
     book_dictionary = letter_count(text)
-    #print(word_count(text))
+    #print()
     #print(letter_count(text))
     sorted_dic = sort_dict(book_dictionary)
+    print(f"--- Book Analysis of {book_path} ---")
+    print(f"{word_count(text)} words found in the book")
+    print("")
+    for x in sorted_dic:
+        print(f"The '{x['letter']}' character was found {x['num']} times")
+    print('--- End of Analysis ---')
 
-    
+
 
 def word_count(book) -> int:
     words = book.split()
